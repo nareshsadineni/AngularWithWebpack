@@ -1,0 +1,12 @@
+<h3>Top Heroes</h3>
+<div class="grid grid-pad">
+    <a *ngFor="let hero of heroes" [routerLink]="['/detail', hero.Id]" class="col-1-4">
+        <div class="module hero">
+            <h4>{{hero.Id}}</h4>
+            <h4>{{hero.Name}}</h4>
+        </div>
+    </a>
+</div>
+<div>
+    <app-hero-search></app-hero-search>
+</div>
