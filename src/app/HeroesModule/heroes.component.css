@@ -53,3 +53,8 @@
     color:white;
     border-style: dashed
   }
+
+  canvas.canvas-chart{
+    max-width:500px;
+    max-height: 500px;
+   }

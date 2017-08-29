@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './HeroesModule/hero-detail.component';
@@ -22,7 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
         FormsModule,
         HttpModule,
         RouterModule,
-        // InMemoryWebApiModule.forRoot(InMemoryDataService),
+        ChartsModule
     ],
     declarations: [
         AppComponent,
