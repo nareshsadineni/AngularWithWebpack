@@ -14,27 +14,29 @@ import { CrisisComponent } from './CrisisCenterModule/app.crisis.component';
 import { DashboardComponent } from './Dashboard/dashboard.component';
 import { HeroService } from './HeroesModule/hero.service';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveModule } from 'app/ReactiveFormsModule/reactiveFormsModule';
 
 
 @NgModule({
-    imports: [
-        AppRoutingModule,
-        BrowserModule,
-        FormsModule,
-        HttpModule,
-        RouterModule,
-        ChartsModule
-    ],
-    declarations: [
-        AppComponent,
-        HeroDetailComponent,
-        HeroesComponent,
-        HeroSearchComponent,
-        PageNotFoundComponent,
-        CrisisComponent,
-        DashboardComponent
-    ],
-    providers: [HeroService],
-    bootstrap: [AppComponent]
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    RouterModule,
+    ChartsModule,
+    ReactiveModule,
+    AppRoutingModule
+  ],
+  declarations: [
+    AppComponent,
+    HeroDetailComponent,
+    HeroesComponent,
+    HeroSearchComponent,
+    PageNotFoundComponent,
+    CrisisComponent,
+    DashboardComponent
+  ],
+  providers: [HeroService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,20 +8,21 @@ import { PageNotFoundComponent } from './PageNotFoundModule/app.not-found.compon
 import { CrisisComponent } from './CrisisCenterModule/app.crisis.component';
 import { DashboardComponent } from './Dashboard/dashboard.component';
 import { HeroService } from './HeroesModule/hero.service';
+import { ReactiveModule } from 'app/ReactiveFormsModule/reactiveFormsModule';
 
 const appRoutes: Routes = [
-    { path: 'crisis-center', component: CrisisComponent },
-    { path: 'hero/:id', component: HeroDetailComponent },
-    { path: 'detail/:id', component: HeroDetailComponent },
-    { path: 'heroes', component: HeroesComponent, data: { title: 'Heroes List' } },
-    { path: 'dashboard', component: DashboardComponent, data: { title: 'Dashboard' } },
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: '**', component: PageNotFoundComponent }
+  { path: 'crisis-center', component: CrisisComponent },
+  { path: 'hero/:id', component: HeroDetailComponent },
+  { path: 'detail/:id', component: HeroDetailComponent },
+  { path: 'heroes', component: HeroesComponent, data: { title: 'Heroes List' } },
+  { path: 'dashboard', component: DashboardComponent, data: { title: 'Dashboard' } },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(appRoutes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule]
 })
 
 export class AppRoutingModule { }

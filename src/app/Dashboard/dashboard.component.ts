@@ -5,25 +5,25 @@ import { Hero } from '../HeroesModule/hero';
 import { HeroService } from '../HeroesModule/hero.service';
 
 @Component({
-    moduleId: module.id,
-    selector: 'dashboard',
-
-    templateUrl: './dashboard.component.html',
-    styleUrls: ['./dashboard.component.css']
+  moduleId: module.id,
+  // tslint:disable-next-line:component-selector
+  selector: 'dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
 
 export class DashboardComponent implements OnInit {
-    heroes: Hero[] = [];
+  heroes: Hero[] = [];
 
-    constructor(private router: Router,
-        private heroSvc: HeroService) {
-    }
-    ngOnInit(): void {
-        this.heroSvc.getHeroes().subscribe(heroes => this.heroes = heroes);
-    }
+  constructor(private router: Router,
+    private heroSvc: HeroService) {
+  }
+  ngOnInit(): void {
+    this.heroSvc.getHeroes().subscribe(heroes => this.heroes = heroes);
+  }
 
-    gotoDetail(hero: Hero): void {
-        let link = ['/detail', hero.Id];
-        this.router.navigate(link);
-    }
+  gotoDetail(hero: Hero): void {
+    const link = ['/detail', hero.Id];
+    this.router.navigate(link);
+  }
 }
